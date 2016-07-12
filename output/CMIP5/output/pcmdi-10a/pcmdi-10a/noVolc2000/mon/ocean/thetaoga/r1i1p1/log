@@ -1,0 +1,70 @@
+netcdf thetaoga_Omon_pcmdi-10a_noVolc2000_r1i1p1_201001-201012 {
+dimensions:
+	time = UNLIMITED ; // (12 currently)
+	bnds = 2 ;
+variables:
+	double time(time) ;
+		time:bounds = "time_bnds" ;
+		time:units = "days since 2010-1-1" ;
+		time:calendar = "standard" ;
+		time:axis = "T" ;
+		time:long_name = "time" ;
+		time:standard_name = "time" ;
+	double time_bnds(time, bnds) ;
+	float thetaoga(time) ;
+		thetaoga:standard_name = "sea_water_potential_temperature" ;
+		thetaoga:long_name = "Global Average Sea Water Potential Temperature" ;
+		thetaoga:units = "K" ;
+		thetaoga:cell_methods = "time: mean area: mean where sea" ;
+		thetaoga:history = "2016-03-09T10:24:58Z altered by CMOR: Converted type from \'d\' to \'f\'." ;
+		thetaoga:associated_files = "baseURL: http://cmip-pcmdi.llnl.gov/CMIP5/dataLocation gridspecFile: gridspec_ocean_fx_pcmdi-10a_noVolc2000_r0i0p0.nc" ;
+
+// global attributes:
+		:institution = "GICC (Generic International Climate Center, Geneva, Switzerland)" ;
+		:institute_id = "pcmdi-10a" ;
+		:experiment_id = "noVolc2000" ;
+		:source = "pcmdi-10a GICCM1 (2002):" ;
+		:model_id = "pcmdi-10a" ;
+		:forcing = "TO, SO, Nat" ;
+		:parent_experiment_id = "N/A" ;
+		:parent_experiment_rip = "N/A" ;
+		:branch_time = 0. ;
+		:contact = "Rusty Koder (koder@middle_earth.net)" ;
+		:history = "Output from archivcl_A1.nce/giccm_03_std_2xCO2_2256. 2016-03-09T10:24:58Z CMOR rewrote data to comply with CF standards and CMIP5 requirements." ;
+		:comment = "Equilibrium reached after 30-year spin-up" ;
+		:references = "Model described by Koder and Tolkien" ;
+		:initialization_method = 1 ;
+		:physics_version = 1 ;
+		:tracking_id = "d2238700-901c-4bd6-914a-3d01ab0e1d0c" ;
+		:product = "output" ;
+		:experiment = "volcano-free hindcast initialized in year 2000" ;
+		:frequency = "mon" ;
+		:creation_date = "2016-03-09T10:24:58Z" ;
+		:Conventions = "CF-1.4" ;
+		:project_id = "CMIP5" ;
+		:table_id = "Table Omon (12 November 2010) 21c7ac8643c73502f98cf73d716ab773" ;
+		:title = "pcmdi-10a model output prepared for CMIP5 volcano-free hindcast initialized in year 2000" ;
+		:parent_experiment = "N/A" ;
+		:modeling_realm = "ocean" ;
+		:realization = 1 ;
+		:cmor_version = "2.9.1" ;
+data:
+
+ time = 15.5, 45, 74.5, 105, 135.5, 166, 196.5, 227.5, 258, 288.5, 319, 349.5 ;
+
+ time_bnds =
+  0, 31,
+  31, 59,
+  59, 90,
+  90, 120,
+  120, 151,
+  151, 181,
+  181, 212,
+  212, 243,
+  243, 273,
+  273, 304,
+  304, 334,
+  334, 365 ;
+
+ thetaoga = 280, 280, 280, 280, 280, 280, 280, 280, 280, 280, 280, 280 ;
+}
